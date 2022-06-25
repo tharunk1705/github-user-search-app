@@ -50,7 +50,7 @@ const UserDetailsCard = ({ userDetails }) => {
               {userDetails?.login}
             </a>
           </div>
-          {userDetails?.repos_url && (
+          {userDetails?.location && (
             <div className="col-span-2 md:col-span-4  flex  items-center overflow-hidden md:my-2">
               <span className="text-red-500">
                 <ion-icon name="location" id="icon"></ion-icon>{" "}

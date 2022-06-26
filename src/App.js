@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Footer from "./component/Footer/Footer.component";
 import InputCard from "./component/InputCard/InputCard.component";
 import UserDetailsCard from "./component/UserDetailsCard/UserDetailsCard.component";
 
@@ -15,6 +16,7 @@ function App() {
       </header>
       <InputCard setUserData={setUserData} />
       {userData && <UserDetailsCard userDetails={userData} />}
+      <Footer />
     </div>
   );
 }

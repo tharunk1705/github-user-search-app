@@ -134,7 +134,7 @@ const UserDetailsCard = ({ userDetails }) => {
             <ion-icon name="calendar" id="icon"></ion-icon>{" "}
           </span>
           <span className="ml-2 truncate  " title={userDetails?.created_at}>
-            Created -{getYear(userDetails?.created_at)}
+            Created - {getYear(userDetails?.created_at)}
           </span>
         </div>
       </div>

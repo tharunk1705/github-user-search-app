@@ -11,8 +11,8 @@ const Footer = () => {
           rel="noreferrer"
           className="bg-[#1da1f2] text-white py-2 px-4 rounded-lg shadow-lg hover:bg-[#1c94df]"
         >
-          <span className="twitter-logo">
-            <ion-icon name="logo-twitter"></ion-icon>
+          <span>
+            <ion-icon name="logo-twitter" id="icon"></ion-icon>
           </span>{" "}
           @tharunk1705
         </a>

@@ -10,8 +10,11 @@ const InputCard = ({ setUserData }) => {
     setUserName(event.target.value);
   };
 
-  const searchUser = (event) => {
+  const fetchUser = (event) => {
     event.preventDefault();
+    if (userName.length === 0) {
+      return;
+    }
     const githubUserName = userName.toLowerCase();
     fetch(`https://api.github.com/users/${githubUserName}`, {
       headers: {
@@ -23,6 +26,7 @@ const InputCard = ({ setUserData }) => {
       })
       .then((data) => {
         setUserData(data);
+        setUserName("");
       })
       .catch((error) => {
         throw new Error(`Error while fethching userdetails : ${error.message}`);
@@ -31,7 +35,7 @@ const InputCard = ({ setUserData }) => {
   return (
     <form
       className="flex flex-col gap-2  m-4 p-4 w-4/5 md:w-2/4 bg-white rounded-xl drop-shadow-lg "
-      onSubmit={searchUser}
+      onSubmit={fetchUser}
     >
       <label htmlFor="userName" className="font-bold tracking-wide">
         Enter GitHub username:

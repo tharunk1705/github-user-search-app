@@ -20,7 +20,7 @@ const UserDetailsCard = ({ userDetails }) => {
   return (
     <div className="flex flex-col gap-2  m-4 p-4 md:p-8 w-4/5 md:w-2/4 bg-white rounded-xl drop-shadow-lg">
       <div className="grid grid-cols-3 gap-2">
-        <div className="col-span-1 md:col-span-1 md:m-8 rounded-full drop-shadow-xl bg-gradient-to-b from-fuchsia-600 to-blue-500 p-[2px]">
+        <div className="col-span-1 md:col-span-1 md:m-8 rounded-full drop-shadow-xl bg-gradient-to-b from-fuchsia-600 via-red-500 to-blue-500 p-[2px]">
           <img
             src={userDetails?.avatar_url}
             alt="user_avatar"
